@@ -1,0 +1,82 @@
+@font-face {
+    font-family: Cera Pro;
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src: url(../fonts/CeraPro-Light.otf) format("opentype")
+}
+
+@font-face {
+    font-family: Cera Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src: url(../fonts/CeraPro-Medium.otf) format("opentype")
+}
+
+@font-face {
+    font-family: Cera Pro;
+    font-style: normal;
+    font-weight: 700;
+    font-display: block;
+    src: url(../fonts/CeraPro-Bold.otf) format("opentype")
+}
+
+@font-face {
+    font-family: Cera Pro;
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url(../fonts/CeraPro-Black.otf) format("opentype")
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: var(--text-family-default);
+}
+
+:root {
+    --text-family-default: 'Cera Pro', Arial, sans-serif;
+    --text-size-xs: 10px;
+    --text-size-s: 11px;
+    --text-size-m: 12px;
+    --text-size-l: 14px;
+    --text-size-xl: 16px;
+    --text-size-xxl: 18px;
+    --text-size-xxxl: 24px;
+    --line-height-xs: 12px;
+    --line-height-s: 16px;
+    --line-height-m: 20px;
+    --line-height-l: 24px;
+    --line-height-xl: 28px;
+    --line-height-xxl: 32px;
+    --line-height-xxxl: 40px;
+    --text-weight-thin: 300;
+    --text-weight-regular: 400;
+    --text-weight-medium: 600;
+    --text-weight-bold: 700;
+    --text-weight-black: 900;
+    --text-font-regular: 'Cera Pro', Arial, sans-serif;
+    --text-font-size-xs: 10px;
+    --text-font-size-s: 11px;
+    --text-font-size-m: 12px;
+    --text-font-size-l: 14px;
+    --text-font-size-xl: 16px;
+    --text-font-size-xxl: 18px;
+    --text-font-size-xxxl: 24px;
+    --text-line-height-xs: 12px;
+    --text-line-height-s: 16px;
+    --text-line-height-m: 20px;
+    --text-line-height-l: 24px;
+    --text-line-height-xl: 28px;
+    --text-line-height-xxl: 32px;
+    --text-line-height-xxxl: 40px;
+    --text-font-weight-regular: 400;
+    --text-font-weight-medium: 600;
+    --text-font-weight-bold: 600;
+}

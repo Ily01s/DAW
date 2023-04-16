@@ -1,0 +1,127 @@
+body {
+    background: var(--background-color-primary);
+}
+
+.wrap-cours {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+}
+
+
+.main-content-cours {
+    height: auto;
+    padding: var(--spacing-zero) var(--spacing-xxl);
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-btn {
+    color: var(--content-color-primary-inverted);
+    text-transform: uppercase;
+    background-color: var(--content-color-primary);;
+    transition: background-color 330ms ease-in-out;
+    height: 40px;
+    width: 60px;
+    display: inline;
+    text-align: center;
+    display: table-cell;
+    margin: -20px 0;
+    margin-left: 10px;
+}
+
+[data-theme='dark'] .formu-logo {
+    filter: unset;
+}
+
+.btn-cap {
+    max-width: 300px;
+}
+
+
+
+.xzf89v {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-btn i {
+    color: inherit;
+}
+
+.table-part {
+    word-break: break-word;
+    display: table-cell;
+}
+
+.div-part-tab {
+    display: table;
+    table-layout: auto;
+}
+
+.section {
+    border: 2px solid var(--highlight-background-color-brand);
+    border-radius: 10px;
+
+    padding: 20px 50px;
+}
+
+.div-fichiers {
+    margin-top: 40px;
+}
+
+.div-annonces {
+    border-bottom-color: var(--border-color-default);
+    border-radius: 10px;
+    border-style: hidden hidden solid hidden;
+    border-width: 4px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+.div-fichiers {
+    border-color: #d5d5d5;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+.rtr-ligne {
+    word-wrap: break-word;
+}
+
+.btnSupSect {
+    color: var(--content-color-primary-inverted);
+    background: var(--red-50);
+    transition: background-color 330ms ease-in-out;
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.linkFichier {
+    color: rgb(60, 89, 255);
+    text-decoration: underline;
+}
+
+#sections {
+    margin: var(--spacing-xxl) var(--spacing-zero);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section {
+    margin: var(--spacing-xl) var(--spacing-zero);
+}

@@ -1,0 +1,140 @@
+/* Here is all the style of the login and sign in view */
+body {
+    overflow: hidden;
+}
+
+.main-content {
+    width: 100%;
+    height: 100vh;
+    background: var(--primary-base-color-brand);
+    position: relative;
+}
+
+.left-side {
+    width: 50%;
+}
+
+.ls-content {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.pink-circle {
+    position: absolute;
+    z-index: 0;
+    width: 286px;
+    height: 286px;
+    background: var(--secondary-base-color-brand);
+    border-radius: var(--border-radius-max);
+    inset: 0;
+}
+
+.formu-logo-wrapper {
+    width: fit-content;
+    height: fit-content;
+}
+
+.formu-logo {
+    width: 322px;
+    height: 66px;
+}
+
+.blue-circle {
+    margin-left: 50%;
+    margin-top: 50%;
+    z-index: 0;
+    width: 286px;
+    height: 286px;
+    transform: translate(100%, 100%);
+    border-radius: var(--border-radius-max);
+    background: var(--tertiary-base-color-brand);
+}
+
+.right-side {
+    z-index: 1;
+    width: 50%;
+    background: var(--background-color-primary);
+    border-radius: 30px var(--border-radius-none) var(--border-radius-none) 30px;
+    padding: var(--spacing-xl);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-wrapper, .signin-form-wrapper {
+    padding: var(--spacing-zero) var(--spacing-l);
+    max-width: 332px;
+    width: 100%;
+}
+
+
+.user-is-not-found {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--background-color-secondary);
+    border-radius: var(--border-radius-xxl);
+    margin-bottom: var(--spacing-xxl);
+    align-items: flex-start;
+}
+
+.unf-icon-wrap {
+    height: 24px;
+    width: 24px;
+    margin-top: var(--spacing-m);
+    margin-left: var(--spacing-m);
+}
+
+.unf-text-wrap {
+    padding: var(--spacing-m);
+}
+
+.unf-text {
+    font-size: var(--text-size-m);
+    color: var(--content-color-secondary);
+    line-height: var(--line-height-m);
+}
+
+.need-help {
+    justify-content: center;
+}
+
+.linebreak {
+    background: var(--border-color-default);
+    width: 100%;
+    margin: var(--spacing-xl) var(--spacing-zero);
+    height: 1px;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    body {
+        overflow-y: unset;
+        overflow-x: hidden;
+    }
+
+    .main-content {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .left-side {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .login-form-wrapper, .signin-form-wrapper {
+        margin-top: var(--spacing-xxxl);
+    }
+
+    .right-side {
+        padding: unset;
+        width: 100%;
+        height: unset;
+        border-radius: 30px 30px var(--border-radius-none) var(--border-radius-none);
+    }
+}

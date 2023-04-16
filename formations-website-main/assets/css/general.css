@@ -1,0 +1,190 @@
+@import "reset.css";
+@import "fonts.css";
+@import "colormode.css";
+
+:root {
+    --spacing-zero: 0px;
+    --spacing-xs: 4px;
+    --spacing-s: 8px;
+    --spacing-m: 12px;
+    --spacing-l: 16px;
+    --spacing-xl: 24px;
+    --spacing-xxl: 32px;
+    --spacing-xxxl: 48px;
+    --border-style-solid: solid;
+    --border-width-default: 1px;
+    --border-width-l: 2px;
+    --border-width-xl: 4px;
+    --border-radius-none: 0;
+    --border-radius-s: 2px;
+    --border-radius-default: 4px;
+    --border-radius-xxl: 20px;
+    --border-radius-max: 100%;
+    --shadow-focus: 0 0 0 1px var(--background-color-primary), 0 0 0 3px #adcdfb;
+    --shadow-dark: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+    --shadow-light: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+    --size-xs: 16px;
+    --size-s: 24px;
+    --size-m: 32px;
+    --controls-size-default: var(--size-m);
+    --controls-size-small: var(--size-s);
+    --transition-delay-default: 0.2s;
+    --transition-timing-default: ease-in-out;
+}
+
+* {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.btn {
+    user-select: none;
+    box-sizing: border-box;
+    margin: var(--spacing-xxl) var(--spacing-zero);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-size-xxl);
+    font-weight: var(--text-weight-medium);
+    padding: var(--spacing-xs) var(--spacing-xl);
+    height: 40px;
+    border-radius: var(--border-radius-xxl);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-primary {
+    color: var(--grey-00);
+    text-transform: uppercase;
+    background: var(--primary-base-color-brand);
+    transition: background-color 330ms ease-in-out;
+}
+
+.btn-primary:hover {
+    background: var(--highlight-background-color-brand);
+}
+
+.btn-secondary {
+    color: var(--content-color-primary-inverted);
+    text-transform: uppercase;
+    background: var(--content-color-primary);
+    transition: background-color 330ms ease-in-out;
+}
+
+
+/* FORM STANDARDS */
+.form-title {
+    font-size: var(--text-size-xxxl);
+    font-weight: var(--text-weight-medium);
+    margin-bottom: var(--spacing-xxl);
+    text-align: center;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-l);
+}
+
+.form-label-wrap {
+    display: flex;
+    padding: var(--spacing-zero) var(--spacing-l);
+    margin-bottom: var(--spacing-xs);
+}
+
+.form-label {
+    cursor: pointer;
+}
+
+.form-label-text {
+    font-size: var(--text-size-l);
+    color: var(--content-color-secondary);
+    font-weight: var(--text-weight-regular);
+}
+
+.form-input-wrap {
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-color-secondary);
+    border: var(--border-width-default) var(--border-style-solid) var(--background-color-secondary);
+    border-radius: var(--border-radius-xxl);
+    padding: var(--spacing-zero) var(--spacing-l);
+}
+
+.form-input-wrap:hover {
+    transition: border-color .25s ease-in-out;
+    border: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+}
+
+.form-input-wrap:focus-within {
+    transition: border-color .25s ease-in-out;
+    border: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+}
+
+.form-input-wrap--incorrect {
+    transition: border-color .25s ease-in-out;
+    border: var(--border-width-default) var(--border-style-solid) var(--base-color-error);
+}
+
+.form-input {
+    height: 100%;
+    width: 100%;
+}
+
+.form-input[type=password] {
+    font-family: sans-serif;
+}
+
+.password-input-toggle {
+    user-select: none;
+    font-size: var(--text-size-s);
+    color: var(--content-color-secondary);
+    font-weight: var(--text-weight-regular);
+}
+
+.form-feedback-wrap {
+    height: 20px;
+    margin: var(--spacing-zero) var(--spacing-l);
+}
+
+.form-feedback-text {
+    font-size: var(--text-size-s);
+    color: var(--base-color-error);
+    font-weight: var(--text-weight-regular);
+}
+
+.link {
+    cursor: pointer;
+    color: var(--content-color-primary);
+    font-size: var(--spacing-m);
+    text-decoration: underline;
+    text-align: center;
+    font-weight: var(--text-weight-thin);
+}
+

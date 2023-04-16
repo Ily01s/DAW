@@ -1,0 +1,105 @@
+.btn-caution {
+    color: var(--content-color-primary-inverted);
+    text-transform: uppercase;
+    background: var(--red-50);
+    transition: background-color 330ms ease-in-out;
+    margin: -20px 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.main-content-qcm {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+
+.btnSupRep {
+    color: var(--content-color-primary-inverted);
+    text-transform: uppercase;
+    background: var(--red-50);
+    transition: background-color 330ms ease-in-out;
+    height:40px;
+    width:60px;
+    text-align: center;
+    display: table-cell;
+    margin: -20px 0;
+}
+
+.btnCheckRep {
+    color: var(--content-color-primary-inverted);
+    text-transform: uppercase;
+    background-color: rgb(166, 166, 166);
+    transition: background-color 330ms ease-in-out;
+    height:40px;
+    width:60px;
+    display: inline;
+    text-align: center;
+    display: table-cell;
+    margin: -20px 0;
+    margin-left: 10px;
+}
+
+.form-input-wrap-qcm {
+    height: 40px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-color-secondary);
+    border: var(--border-width-default) var(--border-style-solid) var(--background-color-secondary);
+    border-radius: var(--border-radius-xxl);
+    padding: var(--spacing-zero) var(--spacing-l);
+    display: table-cell;
+}
+
+.flexRepNum{
+    display: inline;
+}
+
+.waQWu6 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-footer-wrap-qcm {
+    
+    padding: 0px;
+
+    bottom: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    /*background-color: var(--background-color-primary);*/
+
+}
+
+.footer-text-wrap-qcm {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.footer-text-wrap-qcm {
+    
+    text-align: center;
+}
+
+.div-rep-tab
+{
+    display: table;
+    table-layout: auto;
+    width: 156%;
+
+}
+
+.form-wrap-qcm {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 20%;
+}
