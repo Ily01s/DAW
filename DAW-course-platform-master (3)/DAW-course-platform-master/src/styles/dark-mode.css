@@ -1,0 +1,53 @@
+:root {
+  --main-color: #333;
+  --secondary-color: #e9dac1;
+  --text-color: white;
+
+  --form-button-add-color: #35858b;
+  --form-button-cancel-color: gray;
+  --form-button-delete-color: red;
+  --form-button-disabled-color: gray;
+
+  --form-button-text-color1: white;
+  --form-button-text-color2: black;
+  --form-button-hover-border-color: #35858b;
+
+  --form-border-color: #35858b;
+  --form-background-color: #444;
+  --form-title-color: white;
+  --form-titles-color: #aaa;
+  --form-link-color: white;
+  --form-link-hover-color: #aaa;
+  --form-input-color: black;
+  --form-input-text-color: white;
+  --form-input-focus-color: #35858b;
+  --form-error-color: #e34747;
+  --form-success-color: #43a854;
+  --form-bounce-color: red;
+
+  --header-color: white;
+  --header-text-color: #333;
+  --header-text-hover-color: #35858b;
+
+  --footer-color: black;
+  --footer-text-color: white;
+
+  --cards-color: black;
+  --cards-type-color: white;
+  --cards-title-text-color: white;
+
+  --home-button-color1: black;
+  --home-button-color2: white;
+  --home-button-text-color1: white;
+  --home-button-text-color2: black;
+
+  --forum-container-color: #333;
+  --forum-input-color: black;
+  --forum-input-text-color: white;
+  --forum-message-sent-color: #0099ff;
+  --forum-message-sent-text-color: white;
+  --forum-message-receaved-color: #555;
+  --forum-message-receaved-text-color: white;
+
+  --qcm-text-color: white;
+}

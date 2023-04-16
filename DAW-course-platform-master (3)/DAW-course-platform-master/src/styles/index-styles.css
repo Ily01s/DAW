@@ -1,0 +1,33 @@
+.container__app {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.app {
+  display: flex;
+  column-gap: 3rem;
+}
+
+.app__btn {
+  cursor: pointer;
+  border: none;
+  transition: 0.5s all ease;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  padding: 1.25rem 2rem;
+}
+
+.app__btn:hover {
+  box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
+}
+
+.app__btn.left {
+  background-color: var(--home-button-color1);
+  color: var(--home-button-text-color1);
+}
+
+.app__btn.right {
+  background-color: var(--home-button-color2);
+  color: var(--home-button-text-color2);
+}

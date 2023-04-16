@@ -1,0 +1,12 @@
+/* container__form */
+
+.body__container__form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+/* 
+.container__form {
+  width: 350px;
+} */

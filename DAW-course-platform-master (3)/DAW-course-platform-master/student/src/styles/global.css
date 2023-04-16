@@ -1,0 +1,206 @@
+/* ------ Courses page ------ */
+.container__divided {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 1rem;
+}
+
+/* .courses__container__divided > .container__right  {
+    height: 500px;
+    overflow-y: auto;
+  } */
+
+/*Courses cards*/
+.course__card__list {
+  padding: 20px 0 0 0;
+  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+  height: 400px;
+  overflow-y: auto;
+}
+
+/* ------ Students page ------ */
+
+.form__data {
+  display: grid;
+  justify-items: center;
+  row-gap: 10px;
+}
+
+.students__container__divided {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.students__container__divided .container__up {
+  padding: 0;
+  display: grid;
+}
+
+.students__container__divided .container__bottom {
+  padding-top: 40px;
+}
+
+/*Student cards*/
+.student__card__list {
+  height: 100%;
+  padding: 20px 0 0 0;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  height: 400px;
+  overflow-y: auto;
+}
+
+/* ------ Edit student page ------ */
+.student__edit__container {
+  padding: 0 10%;
+  display: grid;
+  justify-items: center;
+}
+
+/* ------ Edit course page ------ */
+.course__body__container__divided {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+}
+
+.course__container__up {
+  padding: 0 15%;
+}
+
+.course__container__bottom {
+  width: 100%;
+}
+
+.resource__container__divided {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  column-gap: 1rem;
+}
+
+/*Resource cards*/
+.resource__card__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  grid-template-rows: auto;
+  margin: 15px 0 0 0;
+}
+
+/*Student section*/
+.body__container__course {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+.body__container__course fieldset {
+  width: 500px;
+  padding: 2rem 3rem;
+}
+
+.container__student-course {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto;
+  row-gap: 1rem;
+  border-radius: 10px;
+  align-items: center;
+  color: white;
+}
+
+.course__image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.course__avatar {
+  width: 120px;
+  height: 120px;
+  z-index: 1;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.course__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 10px;
+}
+
+.container__student-course p,
+.course__description p,
+.container__divided p {
+  margin: 0;
+  font-size: 13px;
+  color: #b2b2b2;
+}
+
+.course__title.center p,
+.course__title.center span {
+  text-align: center;
+}
+
+.course__title p,
+.course__title span {
+  text-align: start;
+}
+
+.container__divided .course__title,
+.course__date,
+.course__level,
+.course__teacher,
+.course__type,
+.course__description {
+  margin: 0;
+}
+
+.course__title,
+.course__date,
+.course__level,
+.course__teacher,
+.course__type,
+.course__description {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  text-align: start;
+  margin: 1rem 0;
+}
+
+.course__title span,
+.course__type span,
+.course__date span,
+.course__level span,
+.course__teacher span,
+.course__description span {
+  text-align: start;
+  color: white;
+}
+
+.course__description {
+  text-align: start;
+}
+.course__description.center p {
+  text-align: center;
+}
+
+.data__fields {
+  row-gap: 0;
+}
+
+.fields__divided {
+  justify-items: center;
+}
+
+/** --- qcm -- **/
+
+.qcm__question {
+  font-size: 1rem;
+  font-weight: bold;
+}
