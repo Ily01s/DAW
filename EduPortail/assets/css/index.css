@@ -1,0 +1,100 @@
+/* Styles pour la page de connexion */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-submit:hover {
+  background-color: #357e3c;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   height: 100vh;
+}
+
+.btn {
+  
+  padding: 20px 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #FFF;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: 20px;
+  text-decoration :none ;
+}
+
+.btn:hover {
+  background-color: #357e3c;
+}
+
+.btn.etudiant {
+  margin-left: 20px;
+}
+
+.btn.prof {
+  margin-right: 20px;
+}
+body {
+  background-color: #000; /* bleu foncé */
+  color: #fff; /* blanc */
+}
+
+.container {
+  background-color: #fff; /* blanc */
+  color: #0077be; /* bleu foncé */
+}
+
