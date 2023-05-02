@@ -2,6 +2,7 @@ CREATE TABLE utilisateur (
     id     INT  NOT NULL AUTO_INCREMENT,
     nom    TEXT NOT NULL,
     prenom TEXT NOT NULL,
+    NE     TEXT NOT NULL,
     email  TEXT NOT NULL,
     date   DATE NOT NULL,
     mdp    TEXT NOT NULL,

@@ -4,6 +4,7 @@ body {
   background-color: #f7f7f7;
 }
 
+
 .container {
   max-width: 400px;
   margin: 0 auto;
@@ -58,13 +59,14 @@ h1 {
 
 .btn-group {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
-   height: 100vh;
+  height: 100vh;
 }
 
 .btn {
-  
+  text-align: right;
+  float: right;
   padding: 20px 40px;
   font-size: 20px;
   border-radius: 5px;
@@ -73,9 +75,13 @@ h1 {
   color: #000000;
   cursor: pointer;
   transition: background-color 0.2s;
-  margin-left: 20px;
+  margin-right: 10px;
   text-decoration :none ;
 }
+.logo {
+  float: left;
+  width: 65%;
+  margin: 20px;}
 
 .btn:hover {
   background-color: #357e3c;
@@ -88,6 +94,7 @@ h1 {
 .btn.prof {
   margin-right: 20px;
 }
+
 body {
   background-color: #000; /* bleu foncé */
   color: #fff; /* blanc */
@@ -97,4 +104,3 @@ body {
   background-color: #fff; /* blanc */
   color: #0077be; /* bleu foncé */
 }
-
