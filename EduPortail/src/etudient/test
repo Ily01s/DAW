@@ -1,0 +1,133 @@
+include_once '../../BDconnection/connexionBDD.php';
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST["validConnectionForm"])) {
+        // Traiter le formulaire de connexion
+        $email = $_POST["email"];
+        $password = md5($_POST["password"]);
+        $commandeSql = "SELECT * FROM utilisateur WHERE mdp='" . $password . "' AND email='" . $email . "'";
+        try {
+            $reponse = $bdd->query($commandeSql);
+            $utilisateur = $reponse->fetch();
+            if ($utilisateur) {
+                header('Location: home.php');
+                $fin = time() + 60 * 60 * 24*365;
+                setcookie("user",$email, $fin);
+                setcookie("password",$password, $fin);
+            } else {
+                $error['user-not-found'] = true;
+            }
+        } catch (PDOException $e) {
+            echo "Erreur : " + $e->getMessage();
+            die("");
+        }
+    } else {
+        // Traiter le formulaire d'inscription
+        $nom = $_POST["nom"];
+        $prenom = $_POST["prenom"];
+        $num_etudiant = $_POST["num_etudiant"];
+        $date_naissance = $_POST["date_naissance"];
+        $mail = $_POST["mail"];
+        $mot_de_passe = md5($_POST["mot_de_passe"]);
+        $commandeSql = "INSERT INTO utilisateur (prenom,nom,email,mdp,date,role,token) VALUES('" . $prenom . "','" . $nom . "','" . $mail . "','" . $mot_de_passe . "','" . date("Y-m-d H:i:s") . "','etudiant','')";
+        try {
+            $bdd->exec($commandeSql);
+            header('Location: qcm_profile.php');
+            exit();
+        } catch (PDOException $e) {
+            echo "Erreur : " + $e->getMessage();
+            die("");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// Récupérer les valeurs des champs du formulaire
+$nom = $_POST["nom"];
+$prenom = $_POST["prenom"];
+$num_etudiant = $_POST["num_etudiant"];
+$date_naissance = $_POST["date_naissance"];
+$mail = $_POST["mail"];
+$mot_de_passe = $_POST["mot_de_passe"];
+
+include_once '../../BDconnection/connexionBDD.php';
+
+// Exécuter la requête SQL pour insérer les données dans la base de données
+
+if (mysqli_query($conn, $sql)) {
+    echo "Le compte a été créé avec succès!";
+} else {
+    echo "Erreur: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+if (isset($_COOKIE["user"]) && isset($_COOKIE["password"]) && $_COOKIE["user"]!= "" && $_COOKIE["password"]!= ""){
+    $commandeSql = "SELECT * FROM users WHERE mdp='" . ($_COOKIE["password"]) . "' AND email='" . $_COOKIE["user"] . "'";
+    try {
+        $reponse = $bdd->query($commandeSql);
+    } catch (PDOException $e) {
+        $fin = time() + 60 * 60 * 24*365;
+        setcookie("user","", $fin);
+        setcookie("password","", $fin);
+        echo "Erreur : " + $e->getMessage();
+        die("");
+    }
+    $utilisateur = $reponse->fetch();
+    if ($utilisateur) {
+        header('Location: home.php');
+    } else {
+        $error['user-not-found'] = true;
+    }
+}	
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+if (isset($_POST["validConnectionForm"])) {
+    if ($_POST["password"] != "" && $_POST["email"] != "") {
+        $donnees["email"] = addslashes(htmlspecialchars($_POST["email"]));
+        $donnees["password"] = md5(addslashes(htmlspecialchars($_POST["password"])));
+
+        $commandeSql = "SELECT * FROM utilisateur WHERE mdp='" . ($donnees["password"]) . "' AND email='" . $donnees["email"] . "'";
+        try {
+            $reponse = $bdd->query($commandeSql);
+        } catch (PDOException $e) {
+            echo "Erreur : " + $e->getMessage();
+            die("");
+        }
+        $utilisateur = $reponse->fetch();
+        if ($utilisateur) {
+            header('Location: home.php');
+            $fin = time() + 60 * 60 * 24*365;
+            setcookie("user",$donnees["email"], $fin);
+            setcookie("password",$donnees["password"], $fin);
+        } else {
+            $error['user-not-found'] = true;
+        }
+    }
+} else {
+    if ($nom != "" && $prenom != "" && $mail != "" && $mot_de_passe != "" && $num_etudiant != "") {
+        $donnees["nom"] = addslashes(htmlspecialchars($nom));
+        $donnees["prenom"] = addslashes(htmlspecialchars($prenom));
+        $donnees["num_etudiant"] = addslashes(htmlspecialchars($num_etudiant));
+        $donnees["mail"] = addslashes(htmlspecialchars($mail));
+        $donnees["mot_de_passe"] = md5(addslashes(htmlspecialchars($mot_de_passe)));
+        $donnees["role"] = "etudiant";
+
+        $commandeSql = "INSERT INTO utilisateur (prenom,nom,email,mdp,date,role,token) VALUES('" . $donnees["firstname"] . "','" . $donnees["name"] . "','" . $donnees["email"] . "','" . $donnees["password"] . "','" . date("Y-m-d H:i:s") . "','" . $donnees["role"] . "','')";
+        try {
+            $bdd->exec($commandeSql);
+        } catch (PDOException $e) {
+            echo "Erreur : " + $e->getMessage();
+            die("");
+        }
+    }
+    header('Location: qcm_profile.php');
+    exit();
+}
+}
+// Fermer la connexion à la base de données
+mysqli_close($conn);
